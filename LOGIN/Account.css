@@ -1,0 +1,220 @@
+/* homepage.css */
+
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    height: 100vh;
+    background: url('wowbg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  /* Header styling */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #33333300;
+    padding: 15px 30px;
+    color: white;
+    gap: 20px;
+  }
+  
+  header img {
+    width: 180px;
+    height: auto;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    color: #FFB000;
+  }
+  
+  .account-icon {
+    margin-left: 20px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+  }
+  
+
+.account-table {
+  width: 100%;
+  max-width: 600px;
+  border-collapse: separate;   /* change from collapse to separate for nicer spacing */
+  border-spacing: 0 10px;      /* add vertical space between rows */
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+  background:#ffffff1c;
+  border-radius: 12px;         /* rounded corners for whole table */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* soft shadow */
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.account-table th, 
+.account-table td {
+  padding: 15px 20px;
+  text-align: left;
+  font-size: 16px;
+  color: white;
+  vertical-align: middle;
+  background:#ffffff1c;
+  border-left: 4px solid transparent; /* spacing left border to highlight row */
+  transition: border-color 0.3s ease;
+  border-radius: 0;  /* reset radius for cells */
+}
+
+.account-table th {
+  background-color: #FFB000;
+  color: white; 
+  font-weight: 600;
+  border-left: none;  /* no left border on headers */
+}
+
+.account-table tr:hover td {
+  border-left-color: #FFB000;  /* highlight left border on hover */
+  background-color: #fff8e145;  /* subtle highlight */
+}
+
+.account-table tr:last-child td {
+  border-bottom: none;
+}
+
+
+  .content h2 {
+    font-size: 40px;
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+
+
+.button-group {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center; /* para mo-center horizontally */
+  gap: 15px; /* space between buttons */
+  flex-wrap: wrap; /* para mo-wrap sa smaller screens */
+}
+
+.button-group form,
+.button-group a {
+  display: inline-block;
+  margin: 0;
+}
+
+
+.btn-view-qr, .logout-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  background-color: #FFB000;
+  transition: background-color 0.3s ease;
+}
+
+.btn-view-qr:hover, .logout-button:hover {
+  background-color: #d18f00;
+}
+
+
+
+  /* Footer styling */
+  footer {
+    background-color: #33333300;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /* ------------ Responsive Styling ------------ */
+  
+  /* For tablets and below */
+  @media screen and (max-width: 991px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px 20px;
+      gap: 10px;
+    }
+  
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+    }
+  
+    nav a {
+      margin: 10px 0;
+    }
+  
+    .account-icon {
+      margin-left: 0;
+    }
+  
+    .content {
+      padding: 20% 10%;
+    }
+  
+    .content img {
+      height: 180px;
+      margin-top: -50px;
+    }
+  
+    .logout-button {
+      margin-top: 80px;
+      padding: 10px 16px;
+      font-size: 14px;
+    }
+  }
+  
+  /* For phones and small screens */
+  @media screen and (max-width: 600px) {
+    header img {
+      width: 120px;
+    }
+  
+    .content p {
+      font-size: 30px;
+    }
+  
+    .content img {
+      height: 150px;
+      margin-top: -40px;
+    }
+  
+    .logout-button {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }
+  

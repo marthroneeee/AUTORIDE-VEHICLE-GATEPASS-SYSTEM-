@@ -1,0 +1,304 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"poppins",sans-serif;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  background: url('wowbg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  justify-content: center; 
+  align-items: center;     
+  position: relative;
+    display: flex;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  color: white; 
+}
+
+.logo {
+  display: block;
+  margin: -10px auto  -10px;
+  width: 180px;
+  height: auto;
+}
+
+.container{
+  background:#ffffff1c;
+  width:450px;
+  padding:1.5rem;
+  margin:50px auto;
+  border-radius:30px;
+}
+
+form{
+  margin:0 2rem;
+}
+.form-title{
+  font-size:18px;
+  text-align:center;
+  padding:1.3rem;
+  margin-bottom:-0.4rem;
+  color: white;
+}
+input{
+  color: black; /* Text color inside input */
+  background-color: white; /* transparent background to fit your bg */
+  width:100%;
+  border-radius: 10px;
+  padding: 5px;
+  border:none;
+  border-bottom:1px solid #757575;
+  padding-left:1.5rem;
+  font-size:15px;
+}
+
+.input-group input {
+  padding-left: 35px;
+}
+
+.input-group{
+  padding:1% 0;
+  position:relative;
+}
+
+.input-group i{
+  position:absolute;
+  color:black;
+  padding-top: 7px;
+  padding-left: 10px;
+}
+
+input:focus{
+  color: white; /* text typed will be white */
+  background-color: transparent;
+  outline:transparent;
+  border-bottom:2px solid #FFB000;
+}
+input::placeholder{
+  color:black
+}
+label{
+  color:transparent;
+  position:relative;
+  left:2em;
+  top:-1.4em;
+  cursor:auto;
+  transition:0.3s ease all;
+}
+input:focus~label,input:not(:placeholder-shown)~label{
+  top:-3em;
+  color:#FFB000;
+  font-size:15px;
+}
+
+.btn{
+  font-size:1.1rem;
+  padding:10px 0;
+  border-radius:5px;
+  outline:none;
+  border:none;
+  width:100%;
+  background:#FFB000;
+  color:white;
+  cursor:pointer;
+}
+.btn:hover{
+  background:#d18f00;
+}
+
+.links{
+  display:flex;
+  justify-content:space-around;
+  padding:0 4rem;
+  margin-top:0.9rem;
+  font-weight:bold;
+  color: white;
+}
+
+#signUpButton {
+background-color: #00000000;
+color: #FFB000;
+font-size: 15px;
+font-weight: bold;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+transition: 0.3s ease;
+}
+
+#signUpButton:hover {
+  color: #d18f00;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+#signInButton {
+background-color: #00000000;
+color: #FFB000;
+font-size: 15px;
+font-weight: bold;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+transition: 0.3s ease;
+}
+
+#signInButton:hover {
+  color: #d18f00;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.modal {
+display: none;
+position: fixed;
+z-index: 9999;
+left: 0;
+top: 0;
+width: 100%; 
+height: 100%; 
+overflow: auto; 
+background-color: rgba(0, 0, 0, 0.664);   
+}
+
+.modal-content {
+background-color: white;
+margin: 10% auto; 
+padding: 20px 20px;
+width: 90%;
+max-width: 400px;
+border-radius: 8px;
+box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+text-align: center;
+position: relative;
+}
+
+.close {
+color: #FFB000;
+position: absolute;
+right: 18px;
+top: 10px;
+font-size: 20px;
+font-weight: bold;
+cursor: pointer;
+transition: color 0.2s;
+}
+
+.close:hover,
+.close:focus {
+color: #d18f00;
+text-decoration: none;
+cursor: pointer;
+}
+
+#modalMessage {
+margin-top: 0px;
+font-size: 15px;
+color: #222;
+}
+
+@keyframes fadeIn {
+from { opacity: 0; }
+to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+from { opacity: 1; }
+to { opacity: 0; }
+}
+
+.modal.show {
+display: block;
+animation: fadeIn 0.3s ease forwards;
+}
+
+.modal.hide {
+animation: fadeOut 0.3s ease forwards;
+}
+
+@media (max-width: 600px) {
+  .container {
+      width: 90%;
+      padding: 1rem;
+  }
+
+  .form-title {
+      font-size: 1.2rem;
+  }
+
+  input {
+      font-size: 14px;
+  }
+
+  .btn {
+      font-size: 1rem;
+  }
+
+  #adminLoginButton {
+      font-size: 14px;
+      top: 10px;
+      right: 10px;
+  }
+}
+
+
+
+/* Admin login button top right */
+      #adminLoginBtn {
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        background-color: #FFB000;
+        border: none;
+        color: white;
+        padding: 10px 15px;
+        font-size: 17px;
+        cursor: pointer;
+        border-radius: 5px;
+        z-index: 9999;
+        transition: background-color 0.3s ease;
+        margin-top: 5px;
+      }
+      #adminLoginBtn:hover {
+        background-color: #d18f00;
+      }
+      /* Modal styles */
+      .modal {
+        display: none; 
+        position: fixed; 
+        z-index: 10000; 
+        left: 0; top: 0;
+        width: 100%; height: 100%;
+        overflow: auto; 
+        background-color: rgba(0,0,0,0.5);
+        opacity: 0;
+        transition: opacity 0.5s;
+      }
+      .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border-radius: 8px;
+        width: 90%;
+        max-width: 400px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        text-align: center;
+      }
+      .modal .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .modal .close:hover {
+        color: black;
+      }
